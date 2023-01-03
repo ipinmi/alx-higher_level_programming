@@ -68,7 +68,7 @@ class Rectangle:
         
         rect = []
         for col in range(self.__height):
-            [rect.append("#") for row in range(self.__width)]
+            [rect.append(str(self.print_symbol)) for row in range(self.__width)]
             if col != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
