@@ -1,156 +1,87 @@
-# JavaScript
+# JavaScript - Objects, Scopes and Closures
 
 ## Tasks :page_with_curl:
 
-- **0. First constant, first print**
+- **0. Rectangle #0**
 
-  - [0-javascript_is_amazing.js](./0-javascript_is_amazing.js): JavaScript script
-    that creates a constant variable `myVar` with the value `'Javascript is amazing'`.
-  - Usage: `./0-javascript_is_amazing.js`
+  - [0-rectangle.js](./0-rectangle.js): JavaScript script that defines an empty
+    class `Rectangle`.
 
-- **1. 3 languages**
+- **1. Rectangle #1**
 
-  - [1-multi_languages.js](./1-multi_languages.js): JavaScript script that prints
-    three lines.
-  - Usage: `./1-multi_languages.js`
-  - Line 1: `'C is fun'`.
-  - Line 2: `'Python is cool'`.
-  - Line 3: `'Javascript is amazing'`.
+  - [1-rectangle.js](./1-rectangle.js): JavaScript script that defines a class
+    `Rectangle`. Builds on [0-rectangle.js](./0-rectangle.js) with:
+    - Constructor that initializes instance attributes `width` and `height` with
+      given parameters `w` and `h`.
 
-- **2. Arguments**
+- **2. Rectangle #2**
 
-  - [2-arguments.js](./2-arguments.js): JavaScript script that prints a message
-    depending on the number of arguments passed.
-  - Usage: `./2-arguments.js <arg 1> <arg 2> ...`
-  - If no arguments are passed, prints `'No argument'`.
-  - If one argument is passed, prints `'Argument found'`.
-  - Otherwise, prints `'Arguments found'`.
+  - [2-rectangle.js](./2-rectangle.js): JavaScript script that defines a class
+    `Rectangle`. Builds on [1-rectangle.js](./1-rectangle.js) with:
+    - If provided `w` and `h` are less than or equal to `0`, creates an empty object.
 
-- **3. Value of my argument**
+- **3. Rectangle #3**
 
-  - [3-value_argument.js](./3-value_argument.js): JavaScript script that prints
-    the first argument passed to it.
-  - Usage: `./3-value_argument.js <arg>`
-  - If no argument is passed, prints `'No argument'`.
+  - [3-rectangle.js](./3-rectangle.js): JavaScript script that defines a class
+    `Rectangle`. Builds on [3-rectangle.js](./3-rectangle.js) with:
+    - Instance method `print()` that prints the rectangle using the `X` character.
 
-- **4. Create a sentence**
+- **4. Rectangle #4**
 
-  - [4-concat.js](./4-concat.js): JavaScript script that prints two arguments
-    passed in the format `<arg 1> is <arg 2>`.
-  - Usage: `./4-concat.js <arg1> <arg2>`
+  - [4-rectangle.js](./4-rectangle.js): JavaScript script that defines a class
+    `Rectangle`. Builds on [4-rectangle.js](./4-rectangle.js) with:
+    - Instance method `rotate()` that swaps the `width` and `height` of the `Rectangle`.
+    - Instance method `double()` that multiplies the `width` and `height` of the
+      `Rectangle` by `2`.
 
-- **5. An Integer**
+- **5. Square #0**
 
-  - [5-to_integer.js](./5-to_integer.js): JavaScript script that prints
-    `My number: <first argument converted in integer>` if the first pased argument
-    can be converted to an integer.
-  - Usage: `./5-to_integer.js`
-  - If the argument cannot be converted to an integer, prints `'Not a number'`.
+  - [5-square.js](./5-square.js): JavaScript script that defines a class `Square`
+    that inherits from `Rectangle`.
+    - Constructor takes one argument `size`.
 
-- **6. Loop to languages**
+- **6. Square #1**
 
-  - [6-multi_languages_loop.js](./6-multi_languages_loop.js): JavaScript script that
-    prints three lines using an array and a loop.
-  - Usage: `./6-multi_languages_loop.js`
-  - First line: `'C is fun'`.
-  - Second line: `'Python is cool'`.
-  - Third line: `'Javascript is awesome'`.
+  - [6-square.js](./6-square.js): JavaScript script that defines a class `Square`
+    that inherits from `Rectangle`. Builds on [5-square.js](./5-square.js) with:
+    - Instance method `charPrint(c)` that prints the `Square` using the character
+      `c`.
+    - If `c` is `undefined`, uses the character `X`.
 
-- **7. I love C**
+- **7. Occurrences**
 
-  - [7-multi_c.js](./7-multi_c.js): JavaScript script that prints `x` times `'C is fun'`.
-  - Usage: `./7-multi_c.js <x>`
-  - If the first argument cannot be converted to a number, prints
-    `'Missing number of occurrences'`.
+  - [7-occurrences.js](./7-occurrences.js): JavaScript function that returns the
+    number of occurrences in a list.
 
-- **8. Square**
+- **8. Esrever**
 
-  - [8-square.js](./8-square.js): JavaScript script that prints a square.
-  - Usage: `./8-square.js <size>`
-  - If the first argument cannot be converted to a number, prints `'Missing size`'.
-  - Uses the `X` character to print the square.
+  - [8-esrever.js](./8-esrever.js): JavaScript function that reverses a list.
 
-- **9. Add**
+- **9. Log me**
 
-  - [9-add.js](./9-add.js): JavaScript script that prints the addition of two
-    numbers passed as arguments.
-  - Usage: `./9-add.js <number 1> <number 2>`
-  - Prototype: `function add(a, b)`
+  - [9-logme.js](./9-logme.js): JavaScript function that prints the number of
+    arguments already printed as well as the new argument value.
+  - Output: `<number arguments already printed>: <current argument value>`
 
-- **10. Factorial**
+- **10. Number conversion**
 
-  - [10-factorial.js](./10-factorial.js): JavaScript script that computes and
-    prints a factorial.
-  - Usage: `./10-factorial.js <number to compute factorial of>`
+  - [10-converter.js](./10-converter.js): JavaScript function that converts a number
+    from base 10 to another base passed as argument.
 
-- **11. Second biggest!**
+- **11. Factor index**
 
-  - [11-second_biggest.js](./11-second_biggest.js): JavaScript script that
-    locates the second largest number in the list of provided arguments.
-  - Usage: `./11-second_biggest.js <arg 1> <arg 2> ...`
-  - If no arguments are passed or the number of arguments is `1`, prints `0`.
+  - [100-map.js](./100-map.js): JavaScript script that imports an array and creates
+    a new array with each value equal to the value of initial list times the index of
+    the new list.
+  - Prints both the initial and new list.
 
-- **12. Object**
-  - [12-object.js](./12-object.js): Update of the following script that replaces
-    the value `12` with `89`.
+- **12. Sorted occurences**
 
-```
-#!/usr/bin/node
-const myObject = {
-  type: 'object',
-  value: 12
-};
-console.log(myObject);
-/*
-YOUR CODE HERE
-*/
-console.log(myObject);
-```
+  - [101-sorted.js](./101-sorted.js): JavaScript script that imports a dictionary
+    of occurrences by user ID and computes a new dictionary of user ID's by occurrences.
+  - Prints the new dictionary.
 
-- **13. Add file**
-
-  - [13-add.js](./13-add.js): JavaScript function `add` that returns the addition
-    of two numbers.
-
-- **14. Const or not const**
-  - [100-let_me_const.js](./100-let_me_const.js): JavaScript script that modifies
-    the value of `myVar` in the following file to `333`.
-
-```
-#!/usr/bin/node
-myVar = 89;
-require('./100-let_me_const')
-console.log(myVar);
-```
-
-- **15. Call me Moby**
-
-  - [101-call_me_moby.js](./101-call_me_moby.js): JavaScript function that executes
-    `x` times a given function.
-
-- **16. Add me maybe**
-
-  - [102-add_me_maybe.js](./102-add_me_maybe.js): JavaScript function that
-    increments a given number and calls a given function.
-
-- **17. Increment object**
-  - [103-object_fct.js](./103-object_fct.js): Update of the following JavaScript
-    script adding a new function `incr` that increments the number `value`.
-
-```
-#!/usr/bin/node
-let myObject = {
-  type: 'object',
-  value: 12
-};
-console.log(myObject);
-/*
-YOUR CODE HERE
-*/
-myObject.incr();
-console.log(myObject);
-myObject.incr();
-console.log(myObject);
-myObject.incr();
-console.log(myObject);
-```
+- **13. Concat files**
+  - [102-concat.js](./102-concat.js): JavaScript script that concatenates two files
+    passed as arguments into a file specifed as the third argument.
+  - Usage: `./102-concat.js fileA fileB fileC`.
