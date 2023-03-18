@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Lists the first State objects from the database hbtn_0e_6_usa.
 import sys
 from sqlalchemy import create_engine
